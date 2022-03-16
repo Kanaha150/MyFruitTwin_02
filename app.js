@@ -41,7 +41,7 @@ function drawWaves() {
         context.strokeStyle = '#00796B';
         if (mode === 'bar') {
             for (var i = 0; i < Math.max(tempRhs.length, max); i++) {
-                var barHeight = Math.round(tempRhs[i + offset] * canvas.height / 200);
+                var barHeight = Math.round(tempRhs[i + offset] * canvas.height / 50);
                 context.rect(11 * i + margin, canvas.height - barHeight, margin, Math.max(0, barHeight - margin));
                 context.stroke();
             }
@@ -53,7 +53,7 @@ function drawWaves() {
             context.shadowColor = '#333';
             context.shadowOffsetY = '1';
             for (var i = 0; i < Math.max(tempRhs.length, max); i++) {
-                var lineHeight = Math.round(tempRhs[i + offset] * canvas.height / 200);
+                var lineHeight = Math.round(tempRhs[i + offset] * canvas.height / 50);
                 if (i === 0) {
                     context.moveTo(11 * i, canvas.height - lineHeight);
                 } else {
